@@ -1,5 +1,9 @@
-const express = require('express');
+const app = require('./app');
 
-const app = express();
+const port = 3001;
 
-module.exports = app;
+app.get('/', (_req, res) => {
+    res.send();
+});
+
+app.listen(port, () => console.log('server is running on port 3001'));
